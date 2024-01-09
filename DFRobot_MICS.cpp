@@ -15,9 +15,9 @@ DFRobot_MICS::~DFRobot_MICS(){}
 
 bool DFRobot_MICS::warmUpTime(uint8_t minute)
 {
-  uint32_t tempTime  = 0;
-  uint32_t tempOX    = 0; 
-  uint32_t tempRED   = 0;
+  //uint32_t tempTime  = 0;
+  //uint32_t tempOX    = 0; 
+  //uint32_t tempRED   = 0;
   uint16_t oxData[1]    = {0x00};
   uint16_t redData[1]   = {0x00};
   uint16_t powerData[1] = {0x00};
@@ -440,7 +440,7 @@ bool DFRobot_MICS_ADC::begin()
 
 void DFRobot_MICS_ADC::writeData(uint8_t reg, uint8_t *data, uint8_t len)
 {
-  uint8_t length = len;
+  //uint8_t length = len;
   if(reg == POWER_MODE_REGISTER){
     if(data[0] == 0){
       digitalWrite(__powerPin, HIGH);        // sleep
